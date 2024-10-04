@@ -1,11 +1,11 @@
 {
-  "name": "chatbot-initial",
+  "name": "chatbot-test",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "next dev -p 3601",
-    "start": "next start -p 7601",
+    "dev": "next dev -p 3619",
+    "start": "next start -p 7619",
     "lint": "next lint",
     "postinstall": "husky install"
   },
