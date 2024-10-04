@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "preserve",
+    "jsxImportSource": "@emotion/react",
+    "paths": {
+      "@/chatbot-packages/*": ["./chatbot-packages/*"],
+      "@chatbot-test/components/*": ["./components/*"],
+      "@chatbot-test/constants/*": ["./constants/*"],
+      "@chatbot-test/cssMixin/*": ["./cssMixin/*"],
+      "@chatbot-test/pages/*": ["./pages/*"],
+      "@chatbot-test/public/*": ["./public/*"],
+      "@chatbot-test/core/*": ["./core/*"],
+      "@chatbot-test/utils/*": ["./utils/*"],
+      "@chatbot-test/qa/*": ["./qa/*"],
+      "@chatbot-test/customUses/*": ["./customUses/*"],
+      "@chatbot-test/hooks/*": ["./hooks/*"],
+      "@chatbot-test/customHooks/*": ["./customHooks/*"],
+      "@chatbot-test/locales/*": ["./locales/*"],
+      "@chatbot-test/layouts/*": ["./layouts/*"]
+    }
+  }
+}

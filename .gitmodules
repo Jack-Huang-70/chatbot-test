@@ -1,0 +1,5 @@
+[submodule "chatbot-packages"]
+	path = chatbot-packages
+	url = git@github.com:pantheon-lab/chatbot-packages.git
+	branch = local
+	fetchRecurseSubmodules = true

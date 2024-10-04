@@ -1,0 +1,13 @@
+node_modules
+
+pantheonlab-tools
+fork-remotion
+private-modules
+js-utils-set
+
+# test
+*.test.js
+
+/build
+
+recorderWorkletProcessor.js

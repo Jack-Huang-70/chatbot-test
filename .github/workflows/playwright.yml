@@ -1,0 +1,24 @@
+name: Dispatch Workflow
+
+on:
+  push:
+    branches: [qa/ppl, qa/singpost]
+  pull_request:
+    branches: [qa/ppl, qa/singpost]
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - id: set-event-type
+        run: |
+          if [[ "${{ github.ref }}" == "refs/heads/qa/ppl" ]]; then
+            echo "::set-output name=event_type::workflow-trigger-ppl"
+          elif [[ "${{ github.ref }}" == "refs/heads/qa/singpost" ]]; then
+            echo "::set-output name=event_type::workflow-trigger-singPost"
+          fi
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          repository: pantheon-lab/frontend-automated-testing
+          event-type: ${{ steps.set-event-type.outputs.event_type }}
